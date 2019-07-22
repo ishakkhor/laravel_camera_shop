@@ -13,34 +13,66 @@
         <div class="sidebar-content">
           <div class="nav-container">
             <ul id="main-menu-navigation" data-menu="menu-navigation" data-scroll-to-active="true" class="navigation navigation-main">
-              <li class="has-sub nav-item"><a href="#"><i class="ft-home"></i><span data-i18n="" class="menu-title">Dashboard</span><span class="tag badge badge-pill badge-danger float-right mr-1 mt-1">2</span></a>
+              
+              
+              <li class=" nav-item"><a href="#"><i class="ft-file-text"></i><span data-i18n="" class="menu-title">Dashboard</span></a>
+              </li>
+              
+              
+              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Products</span></a>
                 <ul class="menu-content">
-                  <li class="active"><a href="#" class="menu-item">Dashboard1</a>
+                  <li><a href="#" class="menu-item">Add Product</a>
                   </li>
-                  <li><a href="#" class="menu-item">Dashboard2</a>
+                  <li><a href="#" class="menu-item">All Product</a>
                   </li>
+                 
+                 
                 </ul>
               </li>
               
-              <li class=" nav-item"><a href="taskboard.html"><i class="ft-file-text"></i><span data-i18n="" class="menu-title">Task Board</span></a>
-              </li>
-              
-              
-              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Data Tables</span></a>
+              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Brands</span></a>
                 <ul class="menu-content">
-                  <li><a href="dt-basic-initialization.html" class="menu-item">Basic Initialisation</a>
+                  <li><a href="#" class="menu-item">Add Brand</a>
                   </li>
-                  <li><a href="dt-advanced-initialization.html" class="menu-item">Advanced initialisation</a>
+                  <li><a href="{{url('admin/brand')}}" class="menu-item">All Brand</a>
                   </li>
-                  <li><a href="dt-styling.html" class="menu-item">Styling</a>
-                  </li>
-                  <li><a href="dt-data-sources.html" class="menu-item">Data Sources</a>
-                  </li>
-                  <li><a href="dt-api.html" class="menu-item">API</a>
-                  </li>
+                  
+                 
                 </ul>
               </li>
-              
+
+              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Category</span></a>
+                <ul class="menu-content">
+                  <li><a href="#" class="menu-item">Add Category</a>
+                  </li>
+                  <li><a href="#" class="menu-item">All Category</a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
+
+              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">User</span></a>
+                <ul class="menu-content">
+                  <li><a href="#" class="menu-item">Add user</a>
+                  </li>
+                  <li><a href="#" class="menu-item">All User</a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
+
+              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Customer</span></a>
+                <ul class="menu-content">
+                  <li><a href="#" class="menu-item">Add Customer</a>
+                  </li>
+                  <li><a href="#" class="menu-item">All Customer</a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
               
             </ul>
           </div>

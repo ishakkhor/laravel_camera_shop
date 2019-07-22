@@ -15,3 +15,4 @@
 
 Route::resource('/', 'HomeController');
 Route::get('/admin', 'DashboardController@index');
+Route::resource('/admin/brand', 'BrandController');

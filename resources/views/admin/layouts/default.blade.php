@@ -174,7 +174,9 @@
   </div>
 </div>
 <!--Statistics cards Ends-->
-
+<div class="row">
+  @yield('admin_content')
+</div>
 <!--Line with Area Chart 1 Starts-->
 
 
