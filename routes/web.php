@@ -14,3 +14,4 @@
 
 
 Route::resource('/', 'HomeController');
+Route::get('/admin', 'DashboardController@index');
