@@ -10,5 +10,10 @@ class DashboardController extends Controller
 		
 		return view('admin.layouts.default');
 	}
+	public function brandcreate(){
+		
+		return view('admin.brand.create');
+	}
+
     
 }

@@ -32,7 +32,7 @@
               
               <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Brands</span></a>
                 <ul class="menu-content">
-                  <li><a href="#" class="menu-item">Add Brand</a>
+                  <li><a href="{{url('admin/brand/create')}}" class="menu-item">Add Brand</a>
                   </li>
                   <li><a href="{{url('admin/brand')}}" class="menu-item">All Brand</a>
                   </li>
