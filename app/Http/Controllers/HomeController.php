@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layouts.default');
+        return view('frontend.layouts.default');
     }
 
     /**

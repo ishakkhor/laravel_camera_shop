@@ -16,4 +16,4 @@
 Route::resource('/', 'HomeController');
 Route::get('/admin', 'DashboardController@index');
 Route::resource('/admin/brand', 'BrandController');
-Route::get('/admin/brand/create', 'DashboardController@brandcreate');
+

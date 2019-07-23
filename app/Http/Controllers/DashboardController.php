@@ -8,12 +8,8 @@ class DashboardController extends Controller
 {
 	public function index(){
 		
-		return view('admin.layouts.default');
+		return view('backend.layouts.default');
 	}
-	public function brandcreate(){
-		
-		return view('admin.brand.create');
-	}
-
+	
     
 }

@@ -24,10 +24,10 @@
     <body>
 
         <!--- Header--->
-        @include('layouts.header');
+        @include('frontend.layouts.header');
 
         <!--- Slider--->
-        @include('layouts.slider');
+        @include('frontend.layouts.slider');
 
 
 
@@ -36,19 +36,19 @@
                 <div class="row flex-row-reverse">
                    <!-- content -->
                     <div class="col-lg-9">
-         @include('layouts.content');
+         @include('frontend.layouts.content');
                     </div>
                     
                     <!-- leftbar -->
                     <div class="col-lg-3">
-         @include('layouts.leftbar');
+         @include('frontend.layouts.leftbar');
                     </div>
 
                 </div>
             </div>
         </div>
 		<!-- footer -->
-         @include('layouts.footer');
+         @include('frontend.layouts.footer');
 
 
 		<!-- modal -->
