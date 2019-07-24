@@ -15,7 +15,7 @@
         <div class="card-body">
           <div class="px-3">
 
-            <form action="{{action('BrandController@update')}}" method="post" class="form form-horizontal form-bordered">
+            <form action="{{route('brand.update', $brand['id'])}}" method="post" class="form form-horizontal form-bordered">
               {{csrf_field()}}
               <div class="form-body">
               	<input type="hidden" name="_method" value="PATCH">

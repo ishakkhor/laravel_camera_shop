@@ -26,7 +26,20 @@
                 <tr>
                   <td>{{$brand['id']}}</td>
                   <td>{{$brand['brand_name']}}</td>
-                  <td><a href="{{action('BrandController@edit', $brand['id'])}}">Edit</a> | <a href="">Delete</a></td>
+                  <td>
+                      
+                    <form action="{{action('BrandController@destroy', $brand['id'])}}" method="post">
+                    {{csrf_field()}}
+                 
+                  
+                    <input type="hidden" name="_method" value="DELETE">
+                   <a class="btn btn-success" href="{{Route('brand.edit', $brand['id'])}}">Edit</a> |
+                   <input type="submit" class="btn btn-danger" value="Delete">
+                   
+                  </form>
+
+                    
+                 </td>
                  
                 </tr>
                 @endforeach

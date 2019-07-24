@@ -75,7 +75,12 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $brand = Brand::find($id);
+        $brand->brand_name = $request->get('brand_name');
+        
+        $brand->save();
+
+        return redirect('admin/brand');
     }
 
     /**
@@ -86,6 +91,9 @@ class BrandController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $brand = Brand::find($id);
+        $brand->delete();
+
+        return redirect('admin/brand');
     }
 }
