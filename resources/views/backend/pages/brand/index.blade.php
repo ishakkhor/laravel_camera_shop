@@ -12,6 +12,12 @@
         </div>
         <div class="card-content ">
           <div class="card-body card-dashboard table-responsive">
+
+            @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
             <table class="table table-striped table-bordered dom-jQuery-events">
               <thead>
                 <tr>

@@ -15,6 +15,12 @@
         <div class="card-body">
           <div class="px-3">
 
+            @if(session()->has('message'))
+              <div class="alert alert-success">
+                  {{ session()->get('message') }}
+              </div>
+            @endif
+
             <form action="{{action('BrandController@store')}}" method="post" class="form form-horizontal form-bordered">
               {{csrf_field()}}
               <div class="form-body">

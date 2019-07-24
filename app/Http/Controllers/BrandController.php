@@ -26,6 +26,7 @@ class BrandController extends Controller
     public function create()
     {
         return view('backend.pages.brand.create');
+        // return redirect()->back()->with('message', 'Successfully Updated');
     }
 
     /**
@@ -40,7 +41,7 @@ class BrandController extends Controller
         $brand->brand_name=$request->get('brand_name');
 
         $brand->save();
-        return redirect('admin/brand');
+        return redirect('admin/brand')->with('message', 'Successfully Created');
     }
 
     /**
@@ -80,7 +81,8 @@ class BrandController extends Controller
         
         $brand->save();
 
-        return redirect('admin/brand');
+        // return redirect('admin/brand');
+        return redirect('admin/brand')->with('message', 'Successfully Updated');
     }
 
     /**
@@ -94,6 +96,7 @@ class BrandController extends Controller
         $brand = Brand::find($id);
         $brand->delete();
 
-        return redirect('admin/brand');
+        // return redirect('admin/brand');
+        return redirect()->back()->with('message', 'Successfully Deleted');
     }
 }
