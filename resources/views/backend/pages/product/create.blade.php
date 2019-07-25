@@ -10,7 +10,17 @@
         </div>
         <div class="card-body">
           <div class="px-3">
-            <form class="form form-horizontal striped-rows form-bordered">
+
+             @if(session()->has('message'))
+              <div class="alert alert-success">
+                  {{ session()->get('message') }}
+              </div>
+            @endif
+            
+            <form action="{{action('ProductController@store')}}" method="post" class="form form-horizontal striped-rows form-bordered">
+
+              {{csrf_field()}}
+
               <div class="form-body">
                 <h4 class="form-section"><i class="ft-file-text"></i> Product Info</h4>
                 <div class="form-group row">
@@ -24,7 +34,7 @@
                 <div class="form-group row">
                   <label class="col-md-3 label-control" for="projectinput7">Select Category</label>
                   <div class="col-md-9">
-                    <select id="projectinput7" name="publication_status" class="form-control">
+                    <select id="projectinput7" name="category_name" class="form-control">
                       <!-- <option value="0" selected="" disabled="">Budget</option> -->
                       <option value="" selected hidden>select one</option>
                       @foreach($allcategory as $category)
@@ -38,12 +48,12 @@
                 <div class="form-group row">
                   <label class="col-md-3 label-control" for="projectinput7">Select Brand</label>
                   <div class="col-md-9">
-                    <select id="projectinput7" name="publication_status" class="form-control">
+                    <select id="projectinput7" name="brand_name" class="form-control">
                       <!-- <option value="0" selected="" disabled="">Budget</option> -->
                       <option value="" selected hidden>select one</option>
-                      <option value="1">published</option>
-                      <option value="0">draft</option>
-                     
+                      @foreach($allbrand as $brand)
+                      <option value="{{$brand['id']}}">{{$brand['brand_name']}}</option>
+                      @endforeach
                     </select>
                   </div>
                 </div>
@@ -76,7 +86,7 @@
                   <label class="col-md-3 label-control">Product Image</label>
                   <div class="col-md-9">
                     <label id="projectinput8" class="file ">
-                      <input type="file" id="file">
+                      <input type="file" id="file" name="product_image">
                       <span class="file-custom"></span>
                     </label>
                   </div>
@@ -112,7 +122,7 @@
                 <button type="button" class="btn btn-raised btn-warning mr-1">
                   <i class="ft-x"></i> Cancel
                 </button>
-                <button type="button" class="btn btn-raised btn-primary">
+                <button type="submit" class="btn btn-raised btn-primary">
                   <i class="fa fa-check-square-o"></i> Save
                 </button>
               </div>
