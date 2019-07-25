@@ -14,8 +14,14 @@
 
 
 Route::resource('/', 'HomeController');
-Route::get('/admin', 'DashboardController@index');
-Route::resource('/admin/brand', 'BrandController');
-Route::resource('/admin/category', 'CategoryController');
-Route::resource('/admin/product', 'ProductController');
 
+
+
+Route::prefix('admin')->group(function () {  //this function will autometically add /admin/
+
+Route::get('/', 'DashboardController@index');
+Route::resource('/brand', 'BrandController');
+Route::resource('/category', 'CategoryController');
+Route::resource('/product', 'ProductController');
+
+});

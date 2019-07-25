@@ -46,14 +46,15 @@ class ProductController extends Controller
             'product_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        if($request->hasfile('product_image'))
-        {
-            foreach ($request->file('product_image') as $image) 
-            {
-                $name=$image->getClientOriginalName();
-                $image->move(public_path().'/images/',$name);
-                $data = $name;
-            }
+        if($request->hasfile('product_image')){
+     
+             $extension = strtolower($request->file('product_image')->getClientOriginalExtension()); 
+             $fileName = str_random() . '.' . $extension;
+                
+                $request->file('product_image')->move(public_path().'/images/',$fileName);
+                $product->product_image= $fileName;
+                
+            
         }
 
 
@@ -64,11 +65,11 @@ class ProductController extends Controller
         $product->product_short_description=$request->get('product_short_description');
         $product->product_long_description=$request->get('product_long_description');
         $product->product_price=$request->get('product_price');
-         $product->product_color=$request->get('product_color');
+        $product->product_color=$request->get('product_color');
         $product->publication_status=$request->get('publication_status');
 
         $product->product_name=$request->product_name;
-        $product->product_image= $data;
+        
        
 
 

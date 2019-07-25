@@ -17,7 +17,7 @@
               </div>
             @endif
             
-            <form action="{{action('ProductController@store')}}" method="post" class="form form-horizontal striped-rows form-bordered">
+            <form action="{{action('ProductController@store')}}" method="post" class="form form-horizontal striped-rows form-bordered" enctype="multipart/form-data">
 
               {{csrf_field()}}
 
