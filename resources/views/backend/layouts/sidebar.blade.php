@@ -21,9 +21,9 @@
               
               <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Products</span></a>
                 <ul class="menu-content">
-                  <li><a href="#" class="menu-item">Add Product</a>
+                  <li><a href="{{url('admin/product/create')}}" class="menu-item">Add Product</a>
                   </li>
-                  <li><a href="#" class="menu-item">All Product</a>
+                  <li><a href="{{url('admin/product')}}" class="menu-item">All Product</a>
                   </li>
                  
                  
