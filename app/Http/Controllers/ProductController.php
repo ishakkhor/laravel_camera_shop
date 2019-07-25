@@ -46,16 +46,7 @@ class ProductController extends Controller
             'product_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        if($request->hasfile('product_image')){
-     
-             $extension = strtolower($request->file('product_image')->getClientOriginalExtension()); 
-             $fileName = str_random() . '.' . $extension;
-                
-                $request->file('product_image')->move(public_path().'/images/',$fileName);
-                $product->product_image= $fileName;
-                
-            
-        }
+        
 
 
         $product = new Product;
@@ -69,12 +60,22 @@ class ProductController extends Controller
         $product->publication_status=$request->get('publication_status');
 
         $product->product_name=$request->product_name;
+        if($request->hasfile('product_image'))
+        {
+            $image=$request->file('product_image');
+           
+                $name=$image->getClientOriginalName();
+                $image->move(public_path().'/images/',$name);
+                $product->product_image= $name;
+                
+           
+        }
         
        
 
 
         $product->save();
-        return redirect('admin/product')->with('message', 'Successfully Created');
+        return back()->with('message', 'Successfully Created');
     }
 
     /**

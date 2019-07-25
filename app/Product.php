@@ -8,8 +8,18 @@ use App\Category;
 class Product extends Model
 {
 
-	//  you have to make all field fillable. guarded is like black list. if you add a field in the array, it will be not fillable
-	protected $guarded = [];
+	//  you have to make all field fillable.
+	  protected $fillable = [
+        'category_id', 
+        'brand_id', 
+        'product_name',
+        'product_short_description',
+        'product_long_description',
+        'product_price',
+        'product_image',
+        'product_color',
+        'publication_status',
+    ];
     //    category have this product
 
 public function category() {
