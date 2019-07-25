@@ -43,9 +43,9 @@
 
               <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Category</span></a>
                 <ul class="menu-content">
-                  <li><a href="#" class="menu-item">Add Category</a>
+                  <li><a href="{{url('admin/category/create')}}" class="menu-item">Add Category</a>
                   </li>
-                  <li><a href="#" class="menu-item">All Category</a>
+                  <li><a href="{{url('admin/category')}}" class="menu-item">All Category</a>
                   </li>
                   
                  
