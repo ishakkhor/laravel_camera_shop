@@ -43,7 +43,7 @@
                   <td>{{$product['product_short_description']}}</td>
                   <td>{{$product['product_long_description']}}</td>
                   <td>{{$product['product_price']}}</td>
-                  <td>{{$product['product_image']}}</td>
+                  <td><img style="height: 60px; width: 60px;" src="{{asset('/images/'.$product['product_image'])}}"></td>
                   <td>{{$product['product_color']}}</td>
                   <td>{{$product['publication_status']}}</td>
                   <td>
