@@ -17,7 +17,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.product.index');
+        
+        
+        $allproduct = Product::all()->toArray();
+
+        return view('backend.pages.product.index' , compact('allproduct'));
     }
 
     /**
@@ -46,9 +50,6 @@ class ProductController extends Controller
             'product_image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        
-
-
         $product = new Product;
         $product->product_name=$request->get('product_name');
         $product->category_id=$request->get('category_name');
@@ -67,12 +68,8 @@ class ProductController extends Controller
                 $name=$image->getClientOriginalName();
                 $image->move(public_path().'/images/',$name);
                 $product->product_image= $name;
-                
-           
+                           
         }
-        
-       
-
 
         $product->save();
         return back()->with('message', 'Successfully Created');
