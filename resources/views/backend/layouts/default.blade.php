@@ -45,7 +45,7 @@
       <!-- main menu-->
       <!--.main-menu(class="#{menuColor} #{menuOpenType}", class=(menuShadow == true ? 'menu-shadow' : ''))-->
      <!--- Sidebar -->
-      @include('backend.layouts.sidebar');
+      @include('backend.layouts.sidebar')
 
 
       <!-- Navbar (Header) Starts-->
@@ -93,7 +93,7 @@
         <!-- BEGIN : Main Content-->
         <div class="main-content">
           <div class="content-wrapper"><!--Statistics cards Starts-->
- @include('backend.layouts.adminheader');
+ @include('backend.layouts.adminheader')
 <!--Statistics cards Ends-->
 <div class="row">
   @yield('admin_content')

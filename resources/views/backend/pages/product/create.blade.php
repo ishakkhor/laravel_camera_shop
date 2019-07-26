@@ -133,4 +133,4 @@
     </div>
   </div>
 
-  @endsection
+@endsection
