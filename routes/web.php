@@ -24,4 +24,5 @@ Route::resource('/brand', 'BrandController');
 Route::resource('/category', 'CategoryController');
 Route::resource('/product', 'ProductController');
 
+
 });

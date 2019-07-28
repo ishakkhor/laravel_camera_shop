@@ -468,10 +468,10 @@
         <div class="tl-bg-img d-none">
           <h6 class="text-center text-bold-500 text-uppercase">Background Images</h6>
           <div class="cz-tl-bg-image row">
-            <div class="col-sm-3"><img src="app-assets/img/gallery/bg-glass-1.jpg" width="90" class="rounded bg-glass-1 selected"></div>
-            <div class="col-sm-3"><img src="app-assets/img/gallery/bg-glass-2.jpg" width="90" class="rounded bg-glass-2"></div>
-            <div class="col-sm-3"><img src="app-assets/img/gallery/bg-glass-3.jpg" width="90" class="rounded bg-glass-3"></div>
-            <div class="col-sm-3"><img src="app-assets/img/gallery/bg-glass-4.jpg" width="90" class="rounded bg-glass-4"></div>
+            <div class="col-sm-3"><img src="{{asset('backend/app-assets/img/gallery/bg-glass-1.jpg')}}" width="90" class="rounded bg-glass-1 selected"></div>
+            <div class="col-sm-3"><img src="{{asset('backend/app-assets/img/gallery/bg-glass-2.jpg')}}" width="90" class="rounded bg-glass-2"></div>
+            <div class="col-sm-3"><img src="{{asset('backend/app-assets/img/gallery/bg-glass-3.jpg')}}" width="90" class="rounded bg-glass-3"></div>
+            <div class="col-sm-3"><img src="{{asset('backend/app-assets/img/gallery/bg-glass-4.jpg')}}" width="90" class="rounded bg-glass-4"></div>
           </div>
         </div>
         <!-- Transparent BG Image Ends    -->

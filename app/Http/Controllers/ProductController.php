@@ -93,8 +93,11 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    { 
+         $product = Product::find($id)->toArray();
+         $allcategory = Category::all()->toArray();
+         $allbrand = Brand::all()->toArray();
+         return view('backend.pages.product.edit' , compact('product', 'allcategory' , 'allbrand'));
     }
 
     /**
