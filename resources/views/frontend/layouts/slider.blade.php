@@ -5,8 +5,8 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12 col-sm-7">
                                 <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">We keep pets for pleasure.</h3>
-                                    <h1 class="animated">Food & Vitamins <br>For all Pets</h1>
+                                    <h3 class="animated">We keep orginal product for pleasure.</h3>
+                                    <h1 class="animated">Camera & Accessories <br>For all Brands</h1>
                                     <div class="slider-btn">
                                         <a class="animated" href="product-details.html">SHOP NOW</a>
                                     </div>
@@ -14,7 +14,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 col-sm-5">
                                 <div class="slider-single-img slider-animated-1">
-                                    <img class="animated" src="{{URL::to('frontend/assets/img/slider/slider-single-img.png')}}" alt="">
+                                    <img class="animated" src="{{URL::to('frontend/assets/img/slider/slider1.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>

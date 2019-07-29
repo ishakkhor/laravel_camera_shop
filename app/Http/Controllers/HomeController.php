@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Category;
 use App\Brand;
-
+use App\Product;
 
 class HomeController extends Controller
 {
@@ -18,10 +18,12 @@ class HomeController extends Controller
     public function index()
     {
 
+
         $allcategory = Category::all()->toArray();
         $allbrand = Brand::all()->toArray();
+        $allproduct = Product::all()->toArray();
          
-        return view('frontend.layouts.default',compact('allcategory', 'allbrand'));
+        return view('frontend.layouts.default',compact('allcategory', 'allbrand', 'allproduct'));
     }
 
     /**
