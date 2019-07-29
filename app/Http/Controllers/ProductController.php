@@ -109,7 +109,32 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->product_name=$request->get('product_name');
+        $product->category_id=$request->get('category_name');
+        $product->brand_id=$request->get('brand_name');
+        $product->product_short_description=$request->get('product_short_description');
+        $product->product_long_description=$request->get('product_long_description');
+        $product->product_price=$request->get('product_price');
+        $product->product_color=$request->get('product_color');
+        $product->publication_status=$request->get('publication_status');
+
+       
+        if($request->hasfile('product_image'))
+        {
+            $image=$request->file('product_image');
+           
+                $name=$image->getClientOriginalName();
+                $image->move(public_path().'/images/',$name);
+                $product->product_image= $name;
+                           
+        }
+      
+        
+        $product->save();
+
+        // return redirect('admin/product');
+        return redirect('admin/product')->with('message', 'Successfully Updated');
     }
 
     /**
@@ -120,6 +145,10 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+
+        // return redirect('admin/product');
+        return redirect()->back()->with('message', 'Successfully Deleted');
     }
 }

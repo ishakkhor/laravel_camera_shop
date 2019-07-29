@@ -89,12 +89,12 @@
                   <div class="col-md-9">
                     <label id="projectinput8" class="file ">
 
-                      <img style="height: 60px; width: 60px;" src="{{asset('/images/'.$product['product_image'])}}">
+                      <img src="{{url($product['product_image']? 'images/'.$product['product_image']:'images/noimage.jpg')}}" id="image_upload_preview" alt="Product Image" class="img-responsive" style="max-height: 100px">
 
 
 
 
-                      <input type="file" id="file" name="product_image" value="{{$product['product_image']}}">
+                      <input type="file" id="inputFile" name="product_image" value="{{$product['product_image']}}">
                       <span class="file-custom"></span>
                     </label>
                   </div>
@@ -140,5 +140,24 @@
       </div>
     </div>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script> 
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image_upload_preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#inputFile").change(function () {
+        readURL(this);
+    });
+</script>
 
 @endsection
