@@ -82,7 +82,7 @@
                         <div class="col-12">
                             <div class="border-top-1 pt-17 pb-15">
                                 <div class="copyright text-center">
-                                    <p>Copyright © <a href="#">Marten.</a> All Right Reserved.</p>
+                                    <p>Copyright © <a href="#">iShakkhor.</a> All Right Reserved.</p>
                                 </div>
                             </div>
                         </div>

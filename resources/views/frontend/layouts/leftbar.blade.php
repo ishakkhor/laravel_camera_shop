@@ -25,15 +25,12 @@
                                 </div>
                             </div>
                             <div class="shop-widget mt-50">
-                                <h4 class="shop-sidebar-title">Food Category </h4>
+                                <h4 class="shop-sidebar-title">Product Category </h4>
                                  <div class="shop-list-style mt-20">
                                     <ul>
-                                        <li><a href="#">Canned Food</a></li>
-                                        <li><a href="#">Dry Food</a></li>
-                                        <li><a href="#">Food Pouches</a></li>
-                                        <li><a href="#">Food Toppers</a></li>
-                                        <li><a href="#">Fresh Food</a></li>
-                                        <li><a href="#">Frozen Food</a></li>
+                                        @foreach($allcategory as $category)
+                                        <li><a href="#">{{$category['category_name']}}</a></li>
+                                       @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -41,11 +38,9 @@
                                 <h4 class="shop-sidebar-title">Top Brands </h4>
                                  <div class="shop-list-style mt-20">
                                     <ul>
-                                        <li><a href="#">Authority</a></li>
-                                        <li><a href="#">AvoDerm Natural</a></li>
-                                        <li><a href="#">Bil-Jac</a></li>
-                                        <li><a href="#">Blue Buffalo</a></li>
-                                        <li><a href="#">Castor & Pollux</a></li>
+                                        @foreach($allbrand as $brand)
+                                        <li><a href="#">{{$brand['brand_name']}}</a></li>
+                                       @endforeach
                                     </ul>
                                 </div>
                             </div>

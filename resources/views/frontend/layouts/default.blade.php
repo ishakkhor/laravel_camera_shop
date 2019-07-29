@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Marten - Pet Food eCommerce Bootstrap4 Template</title>
+        <title>Shakkhor's Camera Shop eCommerce</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -24,10 +24,10 @@
     <body>
 
         <!--- Header--->
-        @include('frontend.layouts.header');
+        @include('frontend.layouts.header')
 
         <!--- Slider--->
-        @include('frontend.layouts.slider');
+        @include('frontend.layouts.slider')
 
 
 
@@ -36,19 +36,19 @@
                 <div class="row flex-row-reverse">
                    <!-- content -->
                     <div class="col-lg-9">
-         @include('frontend.layouts.content');
+         @include('frontend.layouts.content')
                     </div>
                     
                     <!-- leftbar -->
                     <div class="col-lg-3">
-         @include('frontend.layouts.leftbar');
+         @include('frontend.layouts.leftbar')
                     </div>
 
                 </div>
             </div>
         </div>
 		<!-- footer -->
-         @include('frontend.layouts.footer');
+         @include('frontend.layouts.footer')
 
 
 		<!-- modal -->

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Category;
+use App\Brand;
+
 
 class HomeController extends Controller
 {
@@ -14,7 +17,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.layouts.default');
+
+        $allcategory = Category::all()->toArray();
+        $allbrand = Brand::all()->toArray();
+         
+        return view('frontend.layouts.default',compact('allcategory', 'allbrand'));
     }
 
     /**
