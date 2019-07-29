@@ -72,7 +72,8 @@ class ProductController extends Controller
         }
 
         $product->save();
-        return back()->with('message', 'Successfully Created');
+        // return back()->with('message', 'Successfully Created');
+         return redirect('admin/product')->with('message', 'Successfully Created');
     }
 
     /**
