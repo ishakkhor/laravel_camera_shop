@@ -35,7 +35,9 @@
             <div class="header-bottom transparent-bar">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5" style="
+    margin-top: -22px;
+">
                             <div class="logo pt-39">
                                 <a href="index.html"><img alt="" src="{{URL::to('frontend/assets/img/logo/logo.png')}}"></a>
                             </div>
