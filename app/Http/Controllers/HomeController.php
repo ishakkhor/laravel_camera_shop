@@ -23,7 +23,7 @@ class HomeController extends Controller
         $allbrand = Brand::all()->toArray();
         $allproduct = Product::all()->toArray();
          
-        return view('frontend.layouts.default',compact('allcategory', 'allbrand', 'allproduct'));
+        return view('frontend.layouts.content',compact('allcategory', 'allbrand', 'allproduct'));
     }
 
     /**

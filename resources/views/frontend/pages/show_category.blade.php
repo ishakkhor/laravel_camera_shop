@@ -1,7 +1,6 @@
 @extends('frontend.layouts.default')
 @section('home_content')
 
-
                         <div class="shop-topbar-wrapper">
                             <div class="product-sorting-wrapper">
                                 <div class="product-show shorting-style">

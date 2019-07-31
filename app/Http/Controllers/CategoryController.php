@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Category;
+use App\Product;
+use App\Brand;
 
 class CategoryController extends Controller
 {
@@ -53,7 +55,11 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        
+       $allcategory = Category::all()->toArray();
+        $allbrand = Brand::all()->toArray();
+        $allproduct = Product::where('category_id','=',$id)->get();
+         
+        return view('frontend.pages.show_category',compact('allcategory', 'allbrand', 'allproduct'));  
     }
 
     /**

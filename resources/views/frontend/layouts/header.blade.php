@@ -39,7 +39,7 @@
     margin-top: -22px;
 ">
                             <div class="logo pt-39">
-                                <a href="index.html"><img alt="" src="{{URL::to('frontend/assets/img/logo/logo.png')}}"></a>
+                                <a href="{{action('HomeController@index')}}"><img alt="" src="{{URL::to('frontend/assets/img/logo/logo.png')}}"></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 d-none d-lg-block">

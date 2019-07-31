@@ -29,7 +29,7 @@
                                  <div class="shop-list-style mt-20">
                                     <ul>
                                         @foreach($allcategory as $category)
-                                        <li><a href="#">{{$category['category_name']}}</a></li>
+                                        <li><a href="{{action('CategoryController@show', $category['id'])}}">{{$category['category_name']}}</a></li>
                                        @endforeach
                                     </ul>
                                 </div>
@@ -39,7 +39,7 @@
                                  <div class="shop-list-style mt-20">
                                     <ul>
                                         @foreach($allbrand as $brand)
-                                        <li><a href="#">{{$brand['brand_name']}}</a></li>
+                                        <li><a href="{{action('BrandController@show', $brand['id'])}}">{{$brand['brand_name']}}</a></li>
                                        @endforeach
                                     </ul>
                                 </div>
