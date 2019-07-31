@@ -12,11 +12,30 @@
 */
 
 
+//Frontend Route
 
 Route::resource('/', 'HomeController');
 
+Route::get('cart', 'HomeController@cart');
+ 
+Route::get('add-to-cart/{id}', 'HomeController@addToCart');
+
+Route::patch('update-cart', 'HomeController@update');
+ 
+Route::delete('remove-from-cart', 'HomeController@remove'); 
 
 
+
+
+
+
+
+
+
+
+
+
+//Backend Route
 Route::prefix('admin')->group(function () {  //this function will autometically add /admin/
 
 Route::get('/', 'DashboardController@index');
