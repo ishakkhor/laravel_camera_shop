@@ -106,7 +106,7 @@
                                                     <span>${{ $details['price'] }}</span>
                                                 </div>
                                                 <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="ti-close"></i></a>
+                                                    <a class="remove-from-cart" data-id="{{ $id }}"><i class="ti-close"></i></a>
                                                 </div>
                                             </li>
                          @endforeach
@@ -118,7 +118,7 @@
                                             <h4>Total : <span class="shop-total">$260.00</span></h4>
                                         </div> -->
                                         <div class="shopping-cart-btn">
-                                            <a href="cart.html">view cart</a>
+                                            <a href="{{action('HomeController@cart')}}">view cart</a>
                                             <a href="checkout.html">checkout</a>
                                         </div>
                                     </div>
