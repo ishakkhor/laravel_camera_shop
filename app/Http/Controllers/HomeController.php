@@ -91,7 +91,7 @@ class HomeController extends Controller
 
     public function cart()
     {
-        return view('welcome');
+        return view('frontend.pages.carts');
     }
     public function addToCart($id)
     {
@@ -110,16 +110,16 @@ class HomeController extends Controller
  
             $cart = [
                     $id => [
-                        "name" => $product->name,
+                        "name" => $product->product_name,
                         "quantity" => 1,
-                        "price" => $product->price,
-                        "photo" => $product->photo
+                        "price" => $product->product_price,
+                        "photo" => $product->product_image
                     ]
             ];
  
             session()->put('cart', $cart);
  
-            return redirect('/cart')->with('success', 'Product added to cart successfully!');
+            return redirect('/carts')->with('success', 'Product added to cart successfully!');
         }
  
         // if cart not empty then check if this product exist then increment quantity
@@ -129,21 +129,21 @@ class HomeController extends Controller
  
             session()->put('cart', $cart);
  
-            return redirect('/cart')->with('success', 'Product added to cart successfully!');
+            return redirect('/carts')->with('success', 'Product added to cart successfully!');
  
         }
  
         // if item not exist in cart then add to cart with quantity = 1
         $cart[$id] = [
-            "name" => $product->name,
+            "name" => $product->product_name,
             "quantity" => 1,
-            "price" => $product->price,
-            "photo" => $product->photo
+            "price" => $product->product_price,
+            "photo" => $product->product_image
         ];
  
         session()->put('cart', $cart);
  
-        return redirect('/cart')->with('success', 'Product added to cart successfully!');
+        return redirect('/carts')->with('success', 'Product added to cart successfully!');
     }
     public function update(Request $request)
     {
@@ -153,7 +153,7 @@ class HomeController extends Controller
  
             $cart[$request->id]["quantity"] = $request->quantity;
  
-            session()->put('cart', $cart);
+            session()->put('carts', $cart);
  
             session()->flash('success', 'Cart updated successfully');
         }
@@ -176,7 +176,9 @@ class HomeController extends Controller
         }
     }
 
-
+    // public function cartlayout(){
+    //     return view ('frontend.pages.layout');
+    // }
 
 
 

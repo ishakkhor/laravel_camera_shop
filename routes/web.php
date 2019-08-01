@@ -16,7 +16,7 @@
 
 Route::resource('/', 'HomeController');
 
-Route::get('cart', 'HomeController@cart');
+Route::get('carts', 'HomeController@cart');
  
 Route::get('add-to-cart/{id}', 'HomeController@addToCart');
 
