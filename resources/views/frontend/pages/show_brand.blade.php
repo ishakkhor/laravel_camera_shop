@@ -31,7 +31,7 @@
                                         <div class="product-wrapper mb-10">
                                             <div class="product-img">
                                                 <a href="#">
-                                                    <img src="{{asset('/images/'.$product['product_image'])}}" alt="">
+                                                    <img style="height: 200px; width: 100%;" src="{{asset('/images/'.$product['product_image'])}}" alt="">
                                                 </a>
                                                 
                                                 <!-- Product Modal -->
@@ -90,7 +90,7 @@
                             <div class="quick-view-learg-img">
                                 <div class="quick-view-tab-content tab-content">
                                     <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                                        <img src="{{asset('/images/'.$product['product_image'])}}" alt="">
+                                        <img  src="{{asset('/images/'.$product['product_image'])}}" alt="">
                                     </div>
                                    <!--  <div class="tab-pane fade" id="modal2" role="tabpanel">
                                         <img src="{{URL::to('frontend/assets/img/quick-view/l2.jpg')}}" alt="">

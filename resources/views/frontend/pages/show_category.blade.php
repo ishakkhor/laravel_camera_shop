@@ -31,7 +31,7 @@
                                         <div class="product-wrapper mb-10">
                                             <div class="product-img">
                                                 <a href="#">
-                                                    <img src="{{asset('/images/'.$product['product_image'])}}" alt="">
+                                                    <img style="height: 200px; width: 100%;" src="{{asset('/images/'.$product['product_image'])}}" alt="">
                                                 </a>
                                                 
                                                 <!-- Product Modal -->
