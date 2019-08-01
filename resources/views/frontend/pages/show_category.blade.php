@@ -40,7 +40,7 @@
                                                     <a title="Quick View" data-toggle="modal" data-target="#exampleModal{{$product['id']}}" data-id="{{$product['id']}}, {{$product['product_name']}}, {{$product['product_image']}}" href="#">
                                                         <i class="ti-plus"></i>
                                                     </a>
-                                                    <a title="Add To Cart" href="#">
+                                                    <a title="Add To Cart" href="{{ url('add-to-cart/'.$product['id']) }}">
                                                         <i class="ti-shopping-cart"></i>
                                                     </a>
                                                 </div>
@@ -65,11 +65,11 @@
                                                 <p>Lorem ipsum dolor sit amet, consect adipis elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad quis nostrud exerci ullamco laboris nisi ut aliquip ex ea commodo consequat, Duis aute irure dolor.</p>
                                                 <div class="product-list-action">
                                                     <div class="product-list-action-left">
-                                                        <a class="addtocart-btn" title="Add to cart" href="#"><i class="ion-bag"></i> Add to cart</a>
+                                                        <a class="addtocart-btn" title="Add to cart" href="{{ url('add-to-cart/'.$product['id']) }}"><i class="ion-bag"></i> Add to cart</a>
                                                     </div>
                                                     <div class="product-list-action-right">
                                                         <a title="Wishlist" href="#"><i class="ti-heart"></i></a>
-                                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal{{$product['id']}}" href="#"><i class="ti-plus"></i></a>
+                                                        <a title="Quick View" data-toggle="modal" data-target="#exampleModal{{$product['id']}}" href="{{ url('add-to-cart/'.$product['id']) }}"><i class="ti-plus"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,7 +143,7 @@
                                         <input type="text" value="2" name="qtybutton" class="cart-plus-minus-box">
                                     </div>
                                     <div class="quickview-btn-cart">
-                                        <a class="btn-style" href="#">add to cart</a>
+                                        <a class="btn-style" href="{{ url('add-to-cart/'.$product['id']) }}">add to cart</a>
                                     </div>
                                     <div class="quickview-btn-wishlist">
                                         <a class="btn-hover" href="#"><i class="ti-heart"></i></a>
