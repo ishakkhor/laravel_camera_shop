@@ -6,8 +6,8 @@
                             <div class="footer-widget mb-30">
                                 <div class="footer-info-wrapper">
                                     <div class="footer-logo">
-                                        <a href="#">
-                                            <img src="assets/img/logo/logo-2.png" alt="">
+                                        <a href="{{action('HomeController@index')}}">
+                                            <img src="{{URL::to('frontend/assets/img/logo/logo.png')}}" alt="">
                                         </a>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, co adipisi elit, sed eiusmod tempor incididunt ut labore et dolore</p>
