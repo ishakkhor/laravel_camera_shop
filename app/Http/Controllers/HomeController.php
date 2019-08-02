@@ -181,6 +181,9 @@ class HomeController extends Controller
     // }
 
 
-
+    public function checkout()
+    {
+        return view ('frontend.pages.checkout');
+    }
 
 }

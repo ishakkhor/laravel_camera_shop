@@ -22,7 +22,9 @@ Route::get('add-to-cart/{id}', 'HomeController@addToCart');
 
 Route::patch('update-cart', 'HomeController@update');
  
-Route::delete('remove-from-cart', 'HomeController@remove'); 
+Route::delete('remove-from-cart', 'HomeController@remove');
+
+Route::get('checkout', 'HomeController@checkout'); 
 
 
 
