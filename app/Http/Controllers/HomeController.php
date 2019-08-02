@@ -180,10 +180,11 @@ class HomeController extends Controller
     //     return view ('frontend.pages.layout');
     // }
 
-
-    public function checkout()
+    public function success()
     {
-        return view ('frontend.pages.checkout');
+        return view('frontend.pages.success');
+
     }
+    
 
 }

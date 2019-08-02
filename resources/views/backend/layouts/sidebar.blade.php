@@ -52,6 +52,19 @@
                 </ul>
               </li>
 
+
+              <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">Order</span></a>
+                <ul class="menu-content">
+                  <li><a href="#" class="menu-item">Add Order</a>
+                  </li>
+                  <li><a href="{{url('admin/order')}}" class="menu-item">All Order</a>
+                  </li>
+                  
+                 
+                </ul>
+              </li>
+
+
               <li class="has-sub nav-item"><a href="#"><i class="ft-layout"></i><span data-i18n="" class="menu-title">User</span></a>
                 <ul class="menu-content">
                   <li><a href="#" class="menu-item">Add user</a>

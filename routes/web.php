@@ -24,7 +24,8 @@ Route::patch('update-cart', 'HomeController@update');
  
 Route::delete('remove-from-cart', 'HomeController@remove');
 
-Route::get('checkout', 'HomeController@checkout'); 
+Route::get('checkout', 'CheckoutController@index'); 
+Route::get('success', 'HomeController@success'); 
 
 
 
@@ -44,6 +45,7 @@ Route::get('/', 'DashboardController@index');
 Route::resource('/brand', 'BrandController');
 Route::resource('/category', 'CategoryController');
 Route::resource('/product', 'ProductController');
+Route::resource('/order', 'OrderController');
 
 
 });

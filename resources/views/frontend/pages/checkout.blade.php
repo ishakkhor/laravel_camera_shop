@@ -4,17 +4,8 @@
 
 @include('frontend.layouts.header')
 
-        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url({{asset('frontend/assets/img/banner/banner-2.jpg')}});">
-            <div class="container">
-                <div class="breadcrumb-content text-center">
-                    <h2>Checkout</h2>
-                    <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li class="active">Checkout</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+        <form action="{{action('OrderController@store')}}" method="post">
          <!-- shopping-cart-area start -->
         <div class="checkout-area pt-95 pb-70">
             <div class="container">
@@ -72,98 +63,98 @@
                                         <div class="panel-body">
                                             <div class="billing-information-wrapper">
                                                 <div class="row">
+
+                                                 {{csrf_field()}}
+
+
+
+                                       
+
+
+
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>First Name</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Last Name</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Company</label>
-                                                            <input type="text">
+                                                            <label>Customer Name</label>
+                                                            <input type="text" name="customer_name">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>Email Address</label>
-                                                            <input type="email">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 col-md-12">
-                                                        <div class="billing-info">
-                                                            <label>Address</label>
-                                                            <input type="text">
+                                                            <label>Phone</label>
+                                                            <input type="text" name="phone">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>city</label>
-                                                            <input type="text">
+                                                            <label>Email</label>
+                                                            <input type="email" name="email">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>State/Province</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="billing-info">
-                                                            <label>Zip/Postal Code</label>
-                                                            <input type="text">
-                                                        </div>
-                                                    </div>
+
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-select card-mrg">
                                                             <label>Country</label>
-                                                            <select>
-                                                                <option value="1">United State</option>
-                                                                <option value="2">Azerbaijan</option>
-                                                                <option value="3">Bahamas</option>
-                                                                <option value="4">Bahrain</option>
-                                                                <option value="5">Bangladesh</option>
-                                                                <option value="6">Barbados</option>
+                                                            <select name="country">
+                                                                <option value="Bangladesh">Bangladesh</option>
+                                                                <option value="United State">United State</option>
+                                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                                <option value="India">India</option>
+                                                                <option value="Nepal">Nepal</option>
+                                                                
+                                                              
                                                             </select>
                                                         </div>
                                                     </div>
+
+
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>Telephone</label>
-                                                            <input type="text">
+                                                            <label>city</label>
+                                                            <input type="text" name="city">
                                                         </div>
                                                     </div>
+
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>Fax</label>
-                                                            <input type="text">
+                                                            <label>Zip/Postal Code</label>
+                                                            <input type="text" name="zip_code">
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="ship-wrapper">
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="billing-info">
+                                                            <label>Address</label>
+                                                            <input type="text" name="address_line">
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                    
+
+                                                    <div class="ship-wrapper">
                                                     <div class="single-ship">
-                                                        <input type="radio" name="address" value="address" checked="">
-                                                        <label>Ship to this address</label>
-                                                    </div>
-                                                    <div class="single-ship">
-                                                        <input type="radio" name="address" value="dadress">
-                                                        <label>Ship to different address</label>
-                                                    </div>
+                                                        <input type="radio" name="payment_status" value="" checked="">
+                                                        <label>Bkash Payment</label>
+                                                    </div>                                                  
                                                 </div>
-                                                <div class="billing-back-btn">
-                                                    <div class="billing-back">
-                                                        <a href="#"><i class="ti-arrow-up"></i> back</a>
+                                                    
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="billing-info">
+                                                            <label>Trx ID</label>
+                                                            <input type="text" name="trx_id">
+                                                        </div>
                                                     </div>
+                                                    <div class="billing-back-btn">
+                                                    
                                                     <div class="billing-btn">
-                                                        <button type="submit">Get a Quote</button>
+                                                        <button type="submit">Submit</button>
                                                     </div>
                                                 </div>
+
+                                     
+                                                </div>
+                                                
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -187,107 +178,83 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+
+                        <?php $total = 0 ?>
+                        @if(session('cart'))
+                        @foreach(session('cart') as $id => $details)
+                            <?php $total += $details['price'] * $details['quantity'] ?>
+                        @endforeach
+                        @endif
+
+
+
+                        @if(session('cart'))
+                        @foreach(session('cart') as $id => $details)
+
+
                                                                 <tr>
                                                                     <td>
                                                                         <div class="o-pro-dec">
-                                                                            <p>Fusce aliquam</p>
+                                                                            <p>{{$details['name']}}</p>
                                                                         </div>
                                                                     </td>
                                                                     <td>
                                                                         <div class="o-pro-price">
-                                                                            <p>$236.00</p>
+                                                                            <p>{{$details['price']}}</p>
                                                                         </div>
                                                                     </td>
                                                                     <td>
                                                                         <div class="o-pro-qty">
-                                                                            <p>2</p>
+                                                                            <p>{{$details['quantity']}}</p>
                                                                         </div>
                                                                     </td>
                                                                     <td>
                                                                         <div class="o-pro-subtotal">
-                                                                            <p>$236.00</p>
+                                                                            <p>{{$details['price']}}</p>
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="o-pro-dec">
-                                                                            <p>Primis in faucibus</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-price">
-                                                                            <p>$265.00</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-qty">
-                                                                            <p>3</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-subtotal">
-                                                                            <p>$265.00</p>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="o-pro-dec">
-                                                                            <p>Etiam gravida</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-price">
-                                                                            <p>$363.00</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-qty">
-                                                                            <p>2</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-subtotal">
-                                                                            <p>$363.00</p>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="o-pro-dec">
-                                                                            <p>Quisque in arcu</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-price">
-                                                                            <p>$328.00</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-qty">
-                                                                            <p>2</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="o-pro-subtotal">
-                                                                            <p>$328.00</p>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
+
+
+
+
+
+                                         <input type="hidden" name="product_id" value="22">
+                                        <input type="hidden" name="product_name" value="nikon camera">
+                                        <input type="hidden" name="qty" value="2">
+                                        <input type="hidden" name="payment_status   " value="1">
+
+
+
+
+
+
+
+
+
+
+
+                                                                
+
+
+                    @endforeach
+                    @endif
+                              
+
+
                                                             </tbody>
                                                             <tfoot>
                                                                 <tr>
                                                                     <td colspan="3">Subtotal </td>
-                                                                    <td colspan="1">$4,001.00</td>
+                                                                    <td colspan="1">{{$details['price']}}</td>
                                                                 </tr>
                                                                 <tr class="tr-f">
                                                                     <td colspan="3">Shipping & Handling (Flat Rate - Fixed</td>
-                                                                    <td colspan="1">$45.00</td>
+                                                                    <td colspan="1">$00.00</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td colspan="3">Grand Total</td>
-                                                                    <td colspan="1">$4,722.00</td>
+                                                                    <td colspan="1">{{$total}}</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
@@ -324,6 +291,7 @@
                 </div>
             </div>
         </div>
+ </form>
 
 @include('frontend.layouts.footer')
 

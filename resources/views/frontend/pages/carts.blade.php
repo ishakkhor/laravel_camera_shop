@@ -5,7 +5,7 @@
  
 @section('content')
 
- @extends('frontend.layouts.cart_header')
+@extends('frontend.layouts.cart_header')
 
     @if(session('success'))
         <div class="btn btn-success">{{session('success')}}</div>
@@ -54,15 +54,26 @@
         </tbody>
         <tfoot>
         <tr class="visible-xs">
-            <td class="text-center"><strong>Total {{ $total }}</strong></td>
+            <td class="text-center"><strong></strong></td>
         </tr>
         <tr>
-            <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+            <td></td>
             <td colspan="2" class="hidden-xs"></td>
-            <td class="hidden-xs text-center"><strong>Total ${{ $total }}</strong></td>
+            <td class="hidden-xs text-center"><strong>Total ৳{{ $total }}</strong></td>
         </tr>
         </tfoot>
     </table>
+
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <a href="{{ url('/') }}" class="btn btn-warning btn-block"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+        </div>
+        <div class="col-md-6">
+            <a href="{{ action('CheckoutController@index') }}" class="btn btn-success btn-block"><i class="fa fa-angle-left"></i> Ready to Checkout</a>
+        </div>
+    </div>
 
 <br><br><br><br><br><br><br><br>
 
