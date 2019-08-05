@@ -153,7 +153,7 @@ class HomeController extends Controller
  
             $cart[$request->id]["quantity"] = $request->quantity;
  
-            session()->put('carts', $cart);
+            session()->put('cart', $cart);
  
             session()->flash('success', 'Cart updated successfully');
         }

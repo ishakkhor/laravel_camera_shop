@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="payment-img">
                                     <a href="index.html">
-                                        <img src="assets/img/icon-img/payment.png" alt="">
+                                        <img src="{{asset('frontend/assets/img/icon-img/payment.png')}}" alt="">
                                     </a>
                                 </div>
                             </div>

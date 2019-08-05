@@ -26,6 +26,8 @@ Route::delete('remove-from-cart', 'HomeController@remove');
 
 Route::get('checkout', 'CheckoutController@index'); 
 Route::get('success', 'HomeController@success'); 
+Route::resource('signup', 'CustomerController'); 
+Route::resource('contactus', 'ContactusController'); 
 
 
 
@@ -46,6 +48,7 @@ Route::resource('/brand', 'BrandController');
 Route::resource('/category', 'CategoryController');
 Route::resource('/product', 'ProductController');
 Route::resource('/order', 'OrderController');
+Route::get('/customer', 'CustomerController@show');
 
 
 });

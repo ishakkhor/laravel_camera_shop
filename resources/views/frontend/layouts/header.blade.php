@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-12">
                             <div class="welcome-area">
-                                <p>Default welcome msg! </p>
+                                <p>Welcome to Our Online Shop </p>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-12">
@@ -18,12 +18,12 @@
                                             <li><a href="#">Dirham (AED)</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#"><img alt="flag" src="assets/img/icon-img/en.jpg"> English  <i class="icon-arrow-down"></i></a>
+                                    <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/en.jpg')}}"> English  <i class="icon-arrow-down"></i></a>
                                         <ul>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/bl.jpg">Bangla </a></li>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/ar.jpg">Arabic</a></li>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/in.jpg">Hindi </a></li>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/sp.jpg">Spanish</a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/bl.jpg')}}">Bangla </a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/ar.jpg')}}">Arabic</a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/in.jpg')}}">Hindi </a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/sp.jpg')}}">Spanish</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -51,8 +51,8 @@
                                         </li>
                                         
                                        
-                                        <li><a href="about-us.html">SignUp</a></li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li><a href="{{url('signup')}}">SignUp</a></li>
+                                        <li><a href="{{url('contactus')}}">Contact us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -79,7 +79,9 @@
                                 <div class="header-cart same-style">
                                     <button class="icon-cart">
                                         <i class="icon-handbag"></i>
-                                        <span class="count-style">{{ count(session('cart')) }}</span>
+                                        <span class="count-style">@if(session('cart'))
+                                        {{ count(session('cart')) }} @else 0 @endif
+                                        </span>
                                     </button>
 
                         <?php $total = 0 ?>
@@ -119,7 +121,7 @@
                                         </div> -->
                                         <div class="shopping-cart-btn">
                                             <a href="{{action('HomeController@cart')}}">view cart</a>
-                                            <a href="checkout.html">checkout</a>
+                                            <a href="{{action('CheckoutController@index')}}">checkout</a>
                                         </div>
                                     </div>
                                 </div>

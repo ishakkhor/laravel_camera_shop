@@ -26,30 +26,12 @@
         <!--- Header--->
         @include('frontend.layouts.header')
 
-       
-
-        <div class="row">
 
 
-            <br><br><br><br>
-            <div class="col-md-3">
-                
-            </div> 
-            <div class="col-md-6">
-                <h1 style="text-align: center;">Checkout Successful</h1>
-                <img width="100%" src="https://www.greekboston.com/wp-content/uploads/2018/08/Thank-You.jpg">
-            </div>
-            <div class="col-md-3">
-                
-            </div>
 
-            <br><br><br><br>
-            
-        </div>
-
-       
+        @yield('signup_content')
 		<!-- footer -->
-         @include('frontend.layouts.footer')
+        @include('frontend.layouts.footer')
 
 
 		<!-- modal -->

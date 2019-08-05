@@ -7,9 +7,9 @@
                                 <div class="slider-content slider-animated-1 pt-114">
                                     <h3 class="animated">We keep orginal product for pleasure.</h3>
                                     <h1 class="animated">Camera & Accessories <br>For all Brands</h1>
-                                    <div class="slider-btn">
-                                        <a class="animated" href="product-details.html">SHOP NOW</a>
-                                    </div>
+                                    <!-- <div class="slider-btn">
+                                        <a class="animated" href="#">SHOP NOW</a>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 col-sm-5">

@@ -18,12 +18,12 @@
                                             <li><a href="#">Dirham (AED)</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#"><img alt="flag" src="assets/img/icon-img/en.jpg"> English  <i class="icon-arrow-down"></i></a>
+                                    <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/en.jpg')}}"> English  <i class="icon-arrow-down"></i></a>
                                         <ul>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/bl.jpg">Bangla </a></li>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/ar.jpg">Arabic</a></li>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/in.jpg">Hindi </a></li>
-                                            <li><a href="#"><img alt="flag" src="assets/img/icon-img/sp.jpg">Spanish</a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/bl.jpg')}}">Bangla </a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/ar.jpg')}}">Arabic</a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/in.jpg')}}">Hindi </a></li>
+                                            <li><a href="#"><img alt="flag" src="{{asset('frontend/assets/img/icon-img/sp.jpg')}}">Spanish</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -51,8 +51,8 @@
                                         </li>
                                         
                                        
-                                        <li><a href="about-us.html">SignUp</a></li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li><a href="{{url('signup')}}">SignUp</a></li>
+                                        <li><a href="{{url('contactus')}}">Contact us</a></li>
                                     </ul>
                                 </nav>
                             </div>

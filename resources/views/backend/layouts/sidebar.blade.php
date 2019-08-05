@@ -80,7 +80,7 @@
                 <ul class="menu-content">
                   <li><a href="#" class="menu-item">Add Customer</a>
                   </li>
-                  <li><a href="#" class="menu-item">All Customer</a>
+                  <li><a href="{{url('admin/customer')}}" class="menu-item">All Customer</a>
                   </li>
                   
                  

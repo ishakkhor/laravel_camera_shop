@@ -200,7 +200,7 @@
                                                                     </td>
                                                                     <td>
                                                                         <div class="o-pro-price">
-                                                                            <p>{{$details['price']}}</p>
+                                                                            <p>৳{{$details['price']}}</p>
                                                                         </div>
                                                                     </td>
                                                                     <td>
@@ -210,7 +210,7 @@
                                                                     </td>
                                                                     <td>
                                                                         <div class="o-pro-subtotal">
-                                                                            <p>{{$details['price']}}</p>
+                                                                            <p>৳{{$details['price']}}</p>
                                                                         </div>
                                                                     </td>
                                                                 </tr>
@@ -219,10 +219,10 @@
 
 
 
-                                         <input type="hidden" name="product_id" value="22">
-                                        <input type="hidden" name="product_name" value="nikon camera">
-                                        <input type="hidden" name="qty" value="2">
-                                        <input type="hidden" name="payment_status   " value="1">
+                                         <input type="hidden" name="product_id" value="{{$id}}">
+                                        <input type="hidden" name="product_name" value="{{ $details['name'] }}">
+                                        <input type="hidden" name="qty" value="{{ $details['quantity'] }}">
+                                        <input type="hidden" name="payment_status" value="1">
 
 
 
@@ -246,7 +246,7 @@
                                                             <tfoot>
                                                                 <tr>
                                                                     <td colspan="3">Subtotal </td>
-                                                                    <td colspan="1">{{$details['price']}}</td>
+                                                                    <td colspan="1">৳{{$details['price']}}</td>
                                                                 </tr>
                                                                 <tr class="tr-f">
                                                                     <td colspan="3">Shipping & Handling (Flat Rate - Fixed</td>
@@ -254,12 +254,12 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td colspan="3">Grand Total</td>
-                                                                    <td colspan="1">{{$total}}</td>
+                                                                    <td colspan="1">৳{{$total}}</td>
                                                                 </tr>
                                                             </tfoot>
                                                         </table>
                                                     </div>
-                                                    <div class="billing-back-btn">
+                                                    <!-- <div class="billing-back-btn">
                                                         <span>
                                                             Forgot an Item?
                                                             <a href="#"> Edit Your Cart.</a>
@@ -268,7 +268,7 @@
                                                         <div class="billing-btn">
                                                             <button type="submit">Continue</button>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -279,12 +279,12 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="checkout-progress">
-                            <h4>Checkout Progress</h4>
+                            <h4>Bkash Payment</h4>
                             <ul>
-                                <li>Billing Address</li>
-                                <li>Shipping Address</li>
-                                <li>Shipping Method</li>
-                                <li>Payment Method</li>
+                                <li>Bkash Wallet No</li>
+                                <li>01737976050</li>
+                                <li>Keep Transaction ID</li>
+                                <li>Enter Trx ID</li>
                             </ul>
                         </div>
                     </div>
